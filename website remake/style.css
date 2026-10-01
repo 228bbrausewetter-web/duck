@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f7;
+    color: #222;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    background: #f5f6f7;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8%;
+}
+
+.logo img {
+    width: 35px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: #18c5c8;
+}
+
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    color: black;
+    top: 30%;
+left: 75%;
+}
+
+.button {
+    display: inline-block;
+    background: #18c5c8;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #12aeb1;
+}
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero-image,
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+}
+
+.sign {
+    padding: 50px 8%;
+    width: 100%;
+    padding-left: 28%;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.grid-container div {
+    padding: 60px 8%;
+    border: none;
+    background-color: #f5f6f7;
+    text-align: left;
+}
+
+  progress {
+    width: 80%;
+    height: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f1f1f1;
+}
+
+progress::-webkit-progress-value {
+    background-color: #18c5c8;
+}
+
+progress::-moz-progress-bar {
+    background-color: #18c5c8;
+}
+
+progress::-ms-fill {
+    background-color: #18c5c8;
+}
+
+.Information {
+    padding: 50px 8%;
+    background-color: #10c9c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    color:white;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 0;
+}
+
+.portfolio div {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 0;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.portfolio-item > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.overlay img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover > img {
+    transform: scale(1.05);
+}
+
+.portfolio-item:hover .overlay img {
+    transform: scale(1);
+}
+
+.footer {
+    padding: 50px 8%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    color:white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.overlay img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover > img {
+    transform: scale(1.05);
+}
+
+.portfolio-item:hover .overlay img {
+    transform: scale(1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+ 
+.testimonial {
+    background: #10c9c3;
+    color: white;
+    text-align: center;
+    padding: 80px 20%;
+}
+
+.testimonial p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.testimonial h6 {
+    margin-top: 20px;
+}
+
+
+/* LOGOS */
+
+.logos {
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+}
+
+.logos img {
+    width: 100px;
+    height: auto;
+}
+
+
+/* CONTACT */
+
+.contact {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 70px 20%;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+}
+
+.name-email {
+    display: flex;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-family: Arial;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+form button {
+    background: #10c9c3;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0ba9a4;
+}
+
+footer {
+    background: #181818;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 45px 8%;
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+}
+html { 
+    scroll-behavior: smooth;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
